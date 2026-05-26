@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import SectionVideo from '../components/SectionVideo'
 
 const CALENDLY_URL = 'https://calendly.com/peter-quinn-alliance/30min'
 
@@ -327,6 +328,10 @@ export default function Home() {
             </p>
           </div>
         </div>
+
+        {/* Intro video — autoplays as it scrolls into view, tap for sound */}
+        <SectionVideo />
+
         <SectionCta label="See What You Qualify For — FREE" />
       </section>
 
