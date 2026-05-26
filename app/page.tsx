@@ -26,6 +26,19 @@ function CtaButton({
   )
 }
 
+// Lightweight inline CTA placed after every content section so the
+// visitor never scrolls more than one section without a path to book.
+function SectionCta({ label, sub }: { label: string; sub?: string }) {
+  return (
+    <div className="text-center mt-10 md:mt-12">
+      {sub && (
+        <p className="text-[#A9B6CE] text-base md:text-lg max-w-xl mx-auto mb-5">{sub}</p>
+      )}
+      <CtaButton label={label} />
+    </div>
+  )
+}
+
 const livingBenefits = [
   {
     title: 'Critical Illness',
@@ -188,6 +201,21 @@ const comparison = [
   },
 ]
 
+const objections = [
+  {
+    q: 'Is it really free?',
+    a: 'Yes. There’s no cost to you, ever, for a consultation. Ever.',
+  },
+  {
+    q: 'Will I get sold something?',
+    a: 'No. This is an education call. You decide if anything makes sense for you.',
+  },
+  {
+    q: 'How long does it take?',
+    a: '30 minutes. That’s it. Schedule it around your life.',
+  },
+]
+
 function CheckMark() {
   return (
     <span className="w-6 h-6 rounded-md bg-[#C9A84C] text-[#0A1428] flex items-center justify-center flex-shrink-0">
@@ -246,7 +274,25 @@ export default function Home() {
         </p>
 
         <CtaButton label="Book Your FREE 30-Min Call — No Cost, No Obligation" />
-        <p className="text-sm text-[#7B8AA6] mt-5">100% free · 30 minutes · No pressure, ever.</p>
+        <p className="text-sm text-[#7B8AA6] mt-5">Takes 2 minutes to schedule · 100% free · No pitch.</p>
+      </section>
+
+      {/* URGENCY STRIP */}
+      <section className="relative z-10 -mt-6 mb-4">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="flex items-center gap-4 bg-[#C9A84C]/[0.07] border-y border-[#C9A84C]/25 md:rounded-2xl md:border px-6 py-5">
+            <span className="hidden sm:flex w-10 h-10 flex-shrink-0 rounded-full bg-[#C9A84C]/15 text-[#E8C97A] items-center justify-center">
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" />
+              </svg>
+            </span>
+            <p className="text-[#D7E0F0] text-sm md:text-base leading-snug">
+              <span className="text-white font-semibold">Every day without the right coverage is a day your family is exposed.</span>{' '}
+              Book your free call today and find out exactly where you stand.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* WHO I AM */}
@@ -281,6 +327,7 @@ export default function Home() {
             </p>
           </div>
         </div>
+        <SectionCta label="See What You Qualify For — FREE" />
       </section>
 
       {/* LIVING BENEFITS — green accents */}
@@ -293,6 +340,9 @@ export default function Home() {
           <h2 className="font-display text-4xl md:text-5xl tracking-wide mb-4">
             Pays You <span className="text-[#4ADE80]">While You’re Still Alive</span>
           </h2>
+          <p className="text-white text-lg md:text-xl font-semibold max-w-2xl mx-auto mb-2">
+            Your current policy probably pays nothing if you survive.
+          </p>
           <p className="text-[#A9B6CE] text-lg max-w-2xl mx-auto">
             Your policy doesn’t wait until you’re gone. It pays out the moment you’re diagnosed.
           </p>
@@ -311,6 +361,9 @@ export default function Home() {
               <p className="text-[#A9B6CE] text-sm leading-relaxed">{b.body}</p>
             </div>
           ))}
+        </div>
+        <div className="relative">
+          <SectionCta label="Find Out If Your Policy Has Living Benefits — FREE Call" />
         </div>
       </section>
 
@@ -349,6 +402,10 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <SectionCta
+          label="Book a Free Call — We’ll Figure It Out Together"
+          sub="Not sure which one fits you?"
+        />
       </section>
 
       {/* WHY INDEPENDENT */}
@@ -383,22 +440,40 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <SectionCta label="Work With a Broker Who Works For YOU — Book Free" />
+      </section>
+
+      {/* OBJECTION CRUSHER */}
+      <section className="relative max-w-5xl mx-auto px-6 py-16 z-10">
+        <div className="text-center mb-10">
+          <span className="text-xs uppercase tracking-[0.25em] text-[#C9A84C] font-bold">No Catch</span>
+          <h2 className="font-display text-4xl md:text-5xl tracking-wide mt-3">Let’s Clear This Up Right Now</h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {objections.map((o) => (
+            <div key={o.q} className="bg-white/[0.03] border border-white/10 rounded-2xl p-7 hover:border-[#C9A84C]/40 transition-all">
+              <h3 className="font-display text-2xl tracking-wide text-[#E8C97A] mb-3">{o.q}</h3>
+              <p className="text-[#A9B6CE] text-base leading-relaxed">{o.a}</p>
+            </div>
+          ))}
+        </div>
+
+        <SectionCta label="Good. Book My FREE 30-Min Call" />
       </section>
 
       {/* FINAL CTA */}
       <section className="relative max-w-4xl mx-auto px-6 py-16 z-10">
         <div className="bg-white/[0.03] border border-[#C9A84C]/30 rounded-3xl p-9 md:p-16 text-center">
           <h2 className="font-display text-4xl md:text-6xl tracking-wide leading-[1.05] mb-6">
-            Most People Find Out They’re <span className="text-[#C9A84C]">Underprotected When It’s Too Late.</span>
+            Most People Find Out They’re <span className="text-[#C9A84C]">Underprotected When It’s Already Too Late.</span>
           </h2>
-          <p className="text-[#A9B6CE] text-lg md:text-xl max-w-2xl mx-auto mb-3">
-            Don’t be that family. Book your free call today.
+          <p className="text-[#A9B6CE] text-lg md:text-xl max-w-2xl mx-auto mb-9">
+            Don’t be that family. It takes 2 minutes to book and 30 minutes to change everything.{' '}
+            <span className="text-white font-semibold">And it’s completely free.</span>
           </p>
-          <p className="text-white text-base md:text-lg font-semibold mb-9">
-            Takes 2 minutes to schedule. 30 minutes to change everything.
-          </p>
-          <CtaButton label="Book My FREE 30-Min Call — 100% Free" />
-          <p className="text-sm text-[#7B8AA6] mt-5">No cost · No obligation · No pressure.</p>
+          <CtaButton label="Book My FREE 30-Min Call Now" />
+          <p className="text-sm text-[#7B8AA6] mt-5">No pitch · No pressure · No cost · Just answers.</p>
         </div>
       </section>
 
@@ -430,7 +505,7 @@ export default function Home() {
           rel="noopener noreferrer"
           className="block w-full bg-[#C9A84C] text-[#0A1428] font-bold text-center py-4 rounded-xl active:scale-[0.98] transition-transform"
         >
-          Book My FREE 30-Min Call
+          Book Your FREE Call →
         </a>
       </div>
     </main>
