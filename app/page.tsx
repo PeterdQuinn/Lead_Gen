@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 const CALENDLY_URL = 'https://calendly.com/peter-quinn-alliance/30min'
 
 function CtaButton({
@@ -249,21 +251,35 @@ export default function Home() {
 
       {/* WHO I AM */}
       <section className="relative max-w-4xl mx-auto px-6 py-14 z-10">
-        <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-8 md:p-12">
-          <span className="text-xs uppercase tracking-[0.25em] text-[#C9A84C] font-bold">Who I Am</span>
-          <h2 className="font-display text-3xl md:text-4xl tracking-wide mt-3 mb-5">
-            Peter Quinn — Independent Insurance Broker
-          </h2>
-          <p className="text-[#A9B6CE] text-base md:text-lg leading-relaxed mb-4">
-            Based in <span className="text-white font-medium">Mesa, Arizona</span>, I work with the{' '}
-            <span className="text-white font-medium">Alliance Group Living Benefits IMO</span>. I’m{' '}
-            <span className="text-white font-medium">not captive</span> — I’m not tied to a single company. I shop{' '}
-            <span className="text-[#C9A84C] font-semibold">30+ carriers</span> to find what’s right for the client, not
-            what pays the biggest commission.
-          </p>
-          <p className="text-[#A9B6CE] text-base md:text-lg leading-relaxed">
-            One honest conversation can show you exactly what you’re missing.
-          </p>
+        <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row gap-8 md:gap-10 items-center md:items-start">
+          <div className="flex-shrink-0">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden ring-2 ring-[#C9A84C]/40 shadow-2xl shadow-[#C9A84C]/10">
+              <Image
+                src="/Peter.Quinn.png"
+                alt="Peter Quinn, Independent Insurance Broker"
+                fill
+                sizes="(min-width: 768px) 20rem, 16rem"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+          <div className="text-center md:text-left">
+            <span className="text-xs uppercase tracking-[0.25em] text-[#C9A84C] font-bold">Who I Am</span>
+            <h2 className="font-display text-3xl md:text-4xl tracking-wide mt-3 mb-5">
+              Peter Quinn — Independent Insurance Broker
+            </h2>
+            <p className="text-[#A9B6CE] text-base md:text-lg leading-relaxed mb-4">
+              Based in <span className="text-white font-medium">Mesa, Arizona</span>, I work with the{' '}
+              <span className="text-white font-medium">Alliance Group Living Benefits IMO</span>. I’m{' '}
+              <span className="text-white font-medium">not captive</span> — I’m not tied to a single company. I shop{' '}
+              <span className="text-[#C9A84C] font-semibold">30+ carriers</span> to find what’s right for the client, not
+              what pays the biggest commission.
+            </p>
+            <p className="text-[#A9B6CE] text-base md:text-lg leading-relaxed">
+              One honest conversation can show you exactly what you’re missing.
+            </p>
+          </div>
         </div>
       </section>
 
