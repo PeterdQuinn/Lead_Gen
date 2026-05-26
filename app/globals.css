@@ -2,7 +2,7 @@
 
 @theme {
   --font-sans: 'DM Sans', sans-serif;
-  --font-display: 'Playfair Display', serif;
+  --font-display: 'Bebas Neue', sans-serif;
 }
 
 html {
@@ -15,4 +15,5 @@ body {
 
 .font-display {
   font-family: var(--font-display);
+  letter-spacing: 0.01em;
 }

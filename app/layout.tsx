@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, DM_Sans } from 'next/font/google'
+import { Bebas_Neue, DM_Sans } from 'next/font/google'
 import './globals.css'
 
-const playfair = Playfair_Display({
+const bebas = Bebas_Neue({
   subsets: ['latin'],
-  weight: ['700', '800', '900'],
+  weight: ['400'],
   variable: '--font-display',
 })
 
@@ -15,19 +15,19 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Peter Quinn | Wealth Consulting & Insurance Strategy',
+  title: 'Peter Quinn | Living Benefits & Life Insurance — Mesa, AZ',
   description:
-    'Most people are set up wrong. Find out if your 401k, rollovers, Roth, and cash value strategies are actually working for you. Book a free 30-minute review with Peter Quinn.',
+    'Most people think life insurance only pays when you die. Every policy Peter Quinn builds pays YOU at diagnosis — cancer, heart attack, stroke, and more. Book a FREE 30-minute call. No cost, no obligation.',
   openGraph: {
-    title: 'Peter Quinn — Wealth Consulting & Insurance Strategy',
-    description: 'See if your 401k, rollovers, Roth, and cash value setup are costing you. Free 30-min review.',
+    title: 'Your Death Benefit Is Meant For You While You’re Alive',
+    description: 'Independent broker in Mesa, AZ. Living benefits built into every policy. Book a FREE 30-min call — no cost, no obligation.',
     type: 'website',
   },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${bebas.variable} ${dmSans.variable}`}>
       <body className="antialiased">{children}</body>
     </html>
   )
