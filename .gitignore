@@ -37,3 +37,6 @@ next-env.d.ts
 
 # vercel
 .vercel
+
+# off-iCloud build dir
+.next.nosync

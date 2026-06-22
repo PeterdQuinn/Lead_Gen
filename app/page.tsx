@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import SectionVideo from '../components/SectionVideo'
+import HighIncomeCTA from '../components/HighIncomeCTA'
 
 const CALENDLY_URL = 'https://calendly.com/peter-quinn-alliance/30min'
 
@@ -53,7 +54,7 @@ const livingBenefits = [
   },
   {
     title: 'Chronic Illness',
-    body: 'Can’t perform daily activities due to illness — your policy covers your income.',
+    body: 'Can’t perform daily activities due to illness, your policy covers your income.',
     icon: (
       <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <path d="M3 12h4l2 5 4-10 2 5h6" />
@@ -72,7 +73,7 @@ const livingBenefits = [
   },
   {
     title: 'Disability',
-    body: 'Injury or illness stops you from working — your paycheck keeps coming.',
+    body: 'Injury or illness stops you from working, your paycheck keeps coming.',
     icon: (
       <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z" />
@@ -94,7 +95,7 @@ const products = [
   },
   {
     title: 'IUL',
-    body: 'Indexed Universal Life builds tax-free cash value tied to market performance with zero downside risk. Think of it as a retirement account the IRS can’t touch — with living benefits built in.',
+    body: 'Indexed Universal Life builds tax-free cash value tied to market performance with zero downside risk. Think of it as a retirement account the IRS can’t touch, with living benefits built in.',
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <path d="M3 17l5-5 4 4 8-8" />
@@ -253,7 +254,15 @@ export default function Home() {
             Living Benefits · Mesa, Arizona
           </span>
         </div>
-        <CtaButton label="Book Free Call →" className="hidden sm:inline-block !py-2.5 !px-5 !text-sm" />
+        <div className="flex items-center gap-5">
+          <a
+            href="/high-income-strategy"
+            className="hidden sm:inline-block text-sm font-semibold text-[#A9B6CE] hover:text-[#E8C97A] transition-colors"
+          >
+            High Income Strategy
+          </a>
+          <CtaButton label="Book Free Call →" className="hidden sm:inline-block !py-2.5 !px-5 !text-sm" />
+        </div>
       </nav>
 
       {/* HERO */}
@@ -270,11 +279,11 @@ export default function Home() {
 
         <p className="text-lg md:text-2xl text-[#A9B6CE] max-w-2xl mx-auto leading-relaxed mb-10">
           Most people think life insurance only pays when you die.
-          <span className="text-white font-semibold"> Every policy I build pays YOU at diagnosis</span> — cancer,
+          <span className="text-white font-semibold"> Every policy I build pays YOU at diagnosis</span>, cancer,
           heart attack, stroke, and more.
         </p>
 
-        <CtaButton label="Book Your FREE 30-Min Call — No Cost, No Obligation" />
+        <CtaButton label="Book Your FREE 30-Min Call, No Cost, No Obligation" />
         <p className="text-sm text-[#7B8AA6] mt-5">Takes 2 minutes to schedule · 100% free · No pitch.</p>
       </section>
 
@@ -314,12 +323,12 @@ export default function Home() {
           <div className="text-center md:text-left">
             <span className="text-xs uppercase tracking-[0.25em] text-[#C9A84C] font-bold">Who I Am</span>
             <h2 className="font-display text-3xl md:text-4xl tracking-wide mt-3 mb-5">
-              Peter Quinn — Independent Insurance Broker
+              Peter Quinn, Independent Insurance Broker
             </h2>
             <p className="text-[#A9B6CE] text-base md:text-lg leading-relaxed mb-4">
               Based in <span className="text-white font-medium">Mesa, Arizona</span>, I work with the{' '}
               <span className="text-white font-medium">Alliance Group Living Benefits IMO</span>. I’m{' '}
-              <span className="text-white font-medium">not captive</span> — I’m not tied to a single company. I shop{' '}
+              <span className="text-white font-medium">not captive</span>, I’m not tied to a single company. I shop{' '}
               <span className="text-[#C9A84C] font-semibold">30+ carriers</span> to find what’s right for the client, not
               what pays the biggest commission.
             </p>
@@ -329,13 +338,16 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Intro video — autoplays as it scrolls into view, tap for sound */}
+        {/* Intro video, autoplays as it scrolls into view, tap for sound */}
         <SectionVideo />
 
-        <SectionCta label="See What You Qualify For — FREE" />
+        <SectionCta label="See What You Qualify For, FREE" />
       </section>
 
-      {/* LIVING BENEFITS — green accents */}
+      {/* HIGH INCOME DOORWAY, routes the right people into the dedicated funnel */}
+      <HighIncomeCTA />
+
+      {/* LIVING BENEFITS, green accents */}
       <section className="relative max-w-5xl mx-auto px-6 py-16 z-10">
         <div className="absolute inset-x-0 top-0 h-[400px] bg-gradient-to-b from-[#22C55E]/8 to-transparent pointer-events-none rounded-3xl" />
         <div className="relative text-center mb-10">
@@ -368,11 +380,11 @@ export default function Home() {
           ))}
         </div>
         <div className="relative">
-          <SectionCta label="Find Out If Your Policy Has Living Benefits — FREE Call" />
+          <SectionCta label="Find Out If Your Policy Has Living Benefits, FREE Call" />
         </div>
       </section>
 
-      {/* CTA — repeated */}
+      {/* CTA, repeated */}
       <section className="relative max-w-4xl mx-auto px-6 py-14 z-10">
         <div className="bg-gradient-to-br from-[#C9A84C] to-[#A88A38] rounded-3xl p-9 md:p-14 text-center shadow-2xl shadow-[#C9A84C]/20">
           <p className="text-[#0A1428] text-xl md:text-2xl font-bold leading-snug max-w-2xl mx-auto mb-2">
@@ -389,7 +401,7 @@ export default function Home() {
           <span className="text-xs uppercase tracking-[0.25em] text-[#C9A84C] font-bold">What I Offer</span>
           <h2 className="font-display text-4xl md:text-5xl tracking-wide mt-3 mb-4">Protection For Every Situation</h2>
           <p className="text-[#A9B6CE] text-lg max-w-2xl mx-auto">
-            From your first policy to a full wealth strategy — built around you, not a sales quota.
+            From your first policy to a full wealth strategy, built around you, not a sales quota.
           </p>
         </div>
 
@@ -408,7 +420,7 @@ export default function Home() {
           ))}
         </div>
         <SectionCta
-          label="Book a Free Call — We’ll Figure It Out Together"
+          label="Book a Free Call, We’ll Figure It Out Together"
           sub="Not sure which one fits you?"
         />
       </section>
@@ -445,7 +457,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <SectionCta label="Work With a Broker Who Works For YOU — Book Free" />
+        <SectionCta label="Work With a Broker Who Works For YOU, Book Free" />
       </section>
 
       {/* OBJECTION CRUSHER */}

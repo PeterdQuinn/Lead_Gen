@@ -46,7 +46,7 @@ export default function SectionVideo() {
         preload="metadata"
       />
 
-      {/* Tap for sound — only while muted */}
+      {/* Tap for sound, only while muted */}
       {muted && (
         <button
           onClick={toggleMute}
