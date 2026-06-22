@@ -1,15 +1,21 @@
 import type { NextConfig } from "next";
 
+// The `.next.nosync` build dir and pinned Turbopack root are LOCAL-ONLY
+// workarounds for this project living in an iCloud-synced Desktop folder
+// (iCloud evicts Next's build files mid-write and corrupts the cache; macOS
+// skips any path ending in ".nosync"). In CI / Vercel there is no iCloud, and
+// the platform expects the default ".next" output dir — applying these there
+// breaks the build ("routes-manifest.json couldn't be found"). So we only
+// enable them when developing locally.
+const isCI = !!process.env.VERCEL || !!process.env.CI;
+
 const nextConfig: NextConfig = {
-  // The project lives in the iCloud-synced Desktop folder. iCloud evicts/relocates
-  // Next's build files mid-write, which corrupts the cache and 500s every route.
-  // macOS iCloud ignores any path ending in ".nosync", so we keep the build dir
-  // inside the project (Turbopack requires distDir to stay under the root) but
-  // out of iCloud's reach.
-  distDir: ".next.nosync",
-  turbopack: {
-    root: "/Users/peterquinn/Desktop/Insurance",
-  },
+  ...(isCI
+    ? {}
+    : {
+        distDir: ".next.nosync",
+        turbopack: { root: process.cwd() },
+      }),
   // The funnel now lives at /high-income-strategy. Preserve the old URL with a
   // permanent redirect so any existing links/bookmarks still resolve.
   async redirects() {
