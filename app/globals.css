@@ -17,3 +17,122 @@ body {
   font-family: var(--font-display);
   letter-spacing: 0.01em;
 }
+
+/* Long-form article prose for the SEO content cluster. Pages write semantic
+   HTML inside <div className="article"> and inherit consistent styling. */
+.article {
+  color: #c7d2e6;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+.article > h1 {
+  font-family: var(--font-display);
+  color: #fff;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  margin: 0 0 1rem;
+}
+@media (min-width: 768px) {
+  .article > h1 {
+    font-size: 3rem;
+  }
+}
+.article .lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #a9b6ce;
+  margin: 0 0 1.5rem;
+}
+.article h2 {
+  font-family: var(--font-display);
+  color: #fff;
+  font-size: 1.875rem;
+  letter-spacing: 0.02em;
+  margin: 2.75rem 0 1rem;
+}
+.article h3 {
+  color: #e8c97a;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 1.75rem 0 0.5rem;
+}
+.article p {
+  margin: 0 0 1.1rem;
+}
+.article ul,
+.article ol {
+  margin: 0 0 1.25rem;
+  padding-left: 1.25rem;
+}
+.article li {
+  margin: 0.4rem 0;
+}
+.article ul {
+  list-style: none;
+  padding-left: 0;
+}
+.article ul li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+.article ul li::before {
+  content: "•";
+  color: #c9a84c;
+  position: absolute;
+  left: 0.25rem;
+  font-weight: 700;
+}
+.article a {
+  color: #e8c97a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(201, 168, 76, 0.4);
+}
+.article a:hover {
+  color: #c9a84c;
+}
+.article strong {
+  color: #fff;
+  font-weight: 600;
+}
+.article blockquote {
+  border-left: 3px solid #c9a84c;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: #a9b6ce;
+}
+/* Tables scroll horizontally on small screens instead of overflowing. */
+.article .table-wrap {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.article table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  min-width: 30rem;
+}
+.article th,
+.article td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.article thead th {
+  background: rgba(201, 168, 76, 0.1);
+  color: #e8c97a;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.article tbody th {
+  color: #fff;
+  font-weight: 600;
+}
+.article tr:last-child td,
+.article tr:last-child th {
+  border-bottom: none;
+}

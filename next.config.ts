@@ -10,12 +10,13 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: "/Users/peterquinn/Desktop/Insurance",
   },
-  // Friendly URL for the funnel; resolves to the canonical assessment page.
+  // The funnel now lives at /high-income-strategy. Preserve the old URL with a
+  // permanent redirect so any existing links/bookmarks still resolve.
   async redirects() {
     return [
       {
-        source: "/high-income-strategy",
-        destination: "/high-earner-wealth-assessment",
+        source: "/high-earner-wealth-assessment",
+        destination: "/high-income-strategy",
         permanent: true,
       },
     ];

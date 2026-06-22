@@ -1,14 +1,16 @@
 import type { Metadata } from 'next'
 import HighEarnerForm from '../../components/HighEarnerForm'
 import CalendlyEmbed from '../../components/CalendlyEmbed'
+import ClusterLinks from '../../components/seo/ClusterLinks'
 
 const CALENDLY_URL = 'https://calendly.com/peter-quinn-alliance/30min'
 const PDF_URL = '/documents/High_Earner_Wealth_Assessment.pdf'
 
 export const metadata: Metadata = {
-  title: 'High Earner Wealth Assessment | Peter Quinn',
+  title: 'High Income Strategy Assessment | Peter Quinn',
   description:
-    'A strategy session and assessment for high-income professionals, business owners, and investors exploring retirement flexibility, tax diversification, liquidity, and advanced wealth strategies.',
+    'A private strategy assessment for high-income professionals, executives, business owners, and investors exploring retirement flexibility, tax diversification, liquidity, and advanced wealth strategies.',
+  alternates: { canonical: '/high-income-strategy' },
   openGraph: {
     title: 'High Income Strategy Assessment | Peter Quinn',
     description:
@@ -96,14 +98,22 @@ export default function HighEarnerWealthAssessment() {
             Private Wealth Strategy · Mesa, Arizona
           </span>
         </a>
-        <a
-          href={CALENDLY_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden sm:inline-block bg-[#C9A84C] text-[#0A1428] font-bold text-sm px-5 py-2.5 rounded-xl hover:bg-[#E8C97A] transition-all"
-        >
-          Book Strategy Session →
-        </a>
+        <div className="flex items-center gap-5">
+          <a
+            href="/iul"
+            className="hidden sm:inline-block text-sm font-semibold text-[#A9B6CE] hover:text-[#E8C97A] transition-colors"
+          >
+            Resources
+          </a>
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-block bg-[#C9A84C] text-[#0A1428] font-bold text-sm px-5 py-2.5 rounded-xl hover:bg-[#E8C97A] transition-all"
+          >
+            Book Strategy Session →
+          </a>
+        </div>
       </nav>
 
       {/* 1. HERO */}
@@ -238,33 +248,44 @@ export default function HighEarnerWealthAssessment() {
           {[
             {
               title: 'IUL vs Roth IRA',
+              href: '/iul/iul-vs-roth-ira',
               body: 'Both offer tax advantages, but they differ on contribution limits, access, and how growth is treated. A side-by-side look at where each may fit.',
             },
             {
               title: 'What Happens After You Max Your 401(k)?',
+              href: '/tax-diversification/after-maxing-401k',
               body: 'Once you hit the annual ceiling, surplus income needs somewhere to go. A look at the options high earners typically weigh next.',
             },
             {
               title: 'Understanding Policy Loans',
+              href: '/iul/policy-loans',
               body: 'How borrowing against cash value works, what it can cost, and the common missteps that cause strategies to underperform.',
             },
           ].map((article) => (
-            <div
+            <a
               key={article.title}
-              className="bg-white/[0.03] border border-white/10 rounded-2xl p-7 hover:border-[#C9A84C]/40 transition-all flex flex-col"
+              href={article.href}
+              className="group bg-white/[0.03] border border-white/10 rounded-2xl p-7 hover:border-[#C9A84C]/40 hover:bg-white/[0.05] transition-all flex flex-col"
             >
               <span className="text-[10px] uppercase tracking-[0.2em] text-[#C9A84C] font-bold mb-4">
                 Article
               </span>
               <h3 className="font-display text-2xl tracking-wide mb-3 leading-tight">{article.title}</h3>
-              <p className="text-[#8FA0BE] text-sm leading-relaxed">{article.body}</p>
-            </div>
+              <p className="text-[#8FA0BE] text-sm leading-relaxed mb-4">{article.body}</p>
+              <span className="mt-auto text-[#E8C97A] text-sm font-semibold group-hover:translate-x-1 transition-transform">
+                Read &rarr;
+              </span>
+            </a>
           ))}
         </div>
-        <p className="text-center text-[#7B8AA6] text-sm mt-8 max-w-xl mx-auto">
-          These are the kinds of questions we work through together, no products until the strategy
-          makes sense.
-        </p>
+        <div className="text-center mt-8">
+          <a
+            href="/iul"
+            className="inline-block text-[#E8C97A] font-semibold hover:text-[#C9A84C] transition-colors"
+          >
+            Start with the full IUL Guide &rarr;
+          </a>
+        </div>
       </section>
 
       {/* 5. ASSESSMENT FORM, centerpiece */}
@@ -377,6 +398,7 @@ export default function HighEarnerWealthAssessment() {
 
       {/* FOOTER */}
       <footer className="relative border-t border-white/10 py-12 px-6 text-center z-10">
+        <ClusterLinks />
         <p className="font-display text-2xl tracking-wide mb-1">
           Quinn <span className="text-[#C9A84C]">Consulting</span>
         </p>

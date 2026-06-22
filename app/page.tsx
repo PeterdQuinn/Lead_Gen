@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import SectionVideo from '../components/SectionVideo'
 import HighIncomeCTA from '../components/HighIncomeCTA'
+import ClusterLinks from '../components/seo/ClusterLinks'
 
 const CALENDLY_URL = 'https://calendly.com/peter-quinn-alliance/30min'
 
@@ -261,6 +262,12 @@ export default function Home() {
           >
             High Income Strategy
           </a>
+          <a
+            href="/iul"
+            className="hidden md:inline-block text-sm font-semibold text-[#A9B6CE] hover:text-[#E8C97A] transition-colors"
+          >
+            Resources
+          </a>
           <CtaButton label="Book Free Call →" className="hidden sm:inline-block !py-2.5 !px-5 !text-sm" />
         </div>
       </nav>
@@ -496,6 +503,7 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer className="relative border-t border-white/10 py-12 px-6 text-center z-10">
+        <ClusterLinks />
         <p className="font-display text-2xl tracking-wide mb-1">
           Quinn <span className="text-[#C9A84C]">Consulting</span>
         </p>

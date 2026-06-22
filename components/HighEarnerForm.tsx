@@ -102,9 +102,9 @@ export default function HighEarnerForm({ calendlyUrl }: Props) {
   const [loading, setLoading] = useState(false)
   const [submitError, setSubmitError] = useState('')
 
-  // Web3Forms access key, set NEXT_PUBLIC_WEB3FORMS_KEY in .env.local.
-  // Get a free key (no signup) at https://web3forms.com.
-  const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY
+  // Web3Forms access key is a public form ID (safe in client-side code per
+  // their docs), so it's committed directly. No env var or host config needed.
+  const accessKey = 'c9f42ece-864f-4195-8866-2223e3060141'
 
   const formatPhone = (val: string) => {
     const digits = val.replace(/\D/g, '').slice(0, 10)

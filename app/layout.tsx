@@ -15,6 +15,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.peterdquinn.com'),
   title: 'Peter Quinn | Living Benefits & Life Insurance, Mesa, AZ',
   description:
     'Most people think life insurance only pays when you die. Every policy Peter Quinn builds pays YOU at diagnosis, cancer, heart attack, stroke, and more. Book a FREE 30-minute call. No cost, no obligation.',
