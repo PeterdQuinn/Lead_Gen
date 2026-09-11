@@ -516,6 +516,11 @@ export default function Home() {
           <span>Wealth Strategy</span>
         </div>
         <p className="text-[#7B8AA6] text-xs mb-6">Licensed Independent Broker · Alliance Group</p>
+        <div className="flex items-center justify-center gap-4 text-xs mb-6">
+          <a href="/privacy-policy" className="text-[#D6BD72] hover:text-white underline underline-offset-4">Privacy Policy</a>
+          <span className="text-[#4ADE80]">·</span>
+          <a href="/terms-and-conditions" className="text-[#D6BD72] hover:text-white underline underline-offset-4">Terms &amp; Conditions</a>
+        </div>
         <p className="text-[#5E6E8A] text-xs max-w-lg mx-auto leading-relaxed">
           © {new Date().getFullYear()} Quinn Consulting. For informational purposes only. Not financial, tax, or legal
           advice. Insurance products and benefits are subject to suitability, eligibility, and licensing requirements.

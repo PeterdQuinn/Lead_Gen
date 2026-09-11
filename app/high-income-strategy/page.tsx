@@ -404,6 +404,11 @@ export default function HighEarnerWealthAssessment() {
         </p>
         <p className="text-[#7B8AA6] text-xs uppercase tracking-[0.2em] mb-6">Mesa, Arizona</p>
         <p className="text-[#7B8AA6] text-xs mb-6">Licensed Insurance Broker · Business Owner</p>
+        <div className="flex items-center justify-center gap-4 text-xs mb-6">
+          <a href="/privacy-policy" className="text-[#D6BD72] hover:text-white underline underline-offset-4">Privacy Policy</a>
+          <span className="text-[#4ADE80]">·</span>
+          <a href="/terms-and-conditions" className="text-[#D6BD72] hover:text-white underline underline-offset-4">Terms &amp; Conditions</a>
+        </div>
         <p className="text-[#5E6E8A] text-xs max-w-2xl mx-auto leading-relaxed">
           © {new Date().getFullYear()} Quinn Consulting. For informational and educational purposes
           only. Not financial, tax, or legal advice. Any strategies discussed are reviewed
