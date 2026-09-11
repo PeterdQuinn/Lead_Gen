@@ -516,6 +516,24 @@ export default function Home() {
           <span>Wealth Strategy</span>
         </div>
         <p className="text-[#7B8AA6] text-xs mb-6">Licensed Independent Broker · Alliance Group</p>
+        <div className="flex items-center justify-center gap-5 text-sm mb-6">
+          <a
+            href="https://www.instagram.com/quinn_wealth_consulting?utm_source=qr&stkn=N256aXYzMzAxamR3"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#D6BD72] hover:text-white transition-colors"
+          >
+            Instagram
+          </a>
+          <a
+            href="https://www.tiktok.com/@quinn_consult?_r=1&_t=ZT-99eXwwRCO6g"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#D6BD72] hover:text-white transition-colors"
+          >
+            TikTok
+          </a>
+        </div>
         <div className="flex items-center justify-center gap-4 text-xs mb-6">
           <a href="/privacy-policy" className="text-[#D6BD72] hover:text-white underline underline-offset-4">Privacy Policy</a>
           <span className="text-[#4ADE80]">·</span>
