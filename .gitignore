@@ -40,3 +40,4 @@ next-env.d.ts
 
 # off-iCloud build dir
 .next.nosync
+.env*

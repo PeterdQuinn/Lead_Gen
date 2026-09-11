@@ -14,12 +14,12 @@ export default function TermsPage() {
         <p className="lead">Effective date: September 11, 2026</p>
         <p>By using this website, you agree to these Terms &amp; Conditions. If you do not agree, please do not use the site.</p>
         <h2>Informational use</h2>
-        <p>Website content is for general educational and informational purposes only. It is not financial, tax, legal, or insurance advice and does not create an advisor-client, broker-client, or other professional relationship.</p>
+        <p>Website content is for general educational and informational purposes only. It is not financial, tax, legal, or insurance advice and does not create an advisor client, broker client, or other professional relationship.</p>
         <h2>Insurance services</h2>
         <p>Any insurance product, rate, illustration, or benefit discussed is subject to carrier underwriting, policy terms, eligibility, suitability, licensing, and state availability. No result or approval is guaranteed. Applications are not complete until accepted by the applicable carrier.</p>
         <h2>Appointments and communications</h2>
         <p>Booking a consultation does not obligate you to purchase anything. If you provide contact information, you authorize us to respond about your request. Separate consent is required for recurring marketing texts or calls where required by law. Text opt-in is optional and is not required to purchase a product or service.</p>
-        <h2>Third-party services</h2>
+        <h2>Third party services</h2>
         <p>This site may link to or use third-party services including Calendly, GoHighLevel/LeadConnector, and Web3Forms. Their terms and privacy policies apply to their services.</p>
         <h2>Acceptable use</h2>
         <p>You agree not to misuse the site, interfere with its operation, submit unlawful or misleading information, or attempt to access systems or data without authorization.</p>
