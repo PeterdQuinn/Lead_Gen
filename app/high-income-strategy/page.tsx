@@ -9,12 +9,12 @@ const PDF_URL = '/documents/High_Earner_Wealth_Assessment.pdf'
 export const metadata: Metadata = {
   title: 'High Income Strategy Assessment | Peter Quinn',
   description:
-    'A private strategy assessment for high-income professionals, executives, business owners, and investors exploring retirement flexibility, tax diversification, liquidity, and advanced wealth strategies.',
+    'A private strategy assessment for high income professionals, executives, business owners, and investors exploring retirement flexibility, tax diversification, liquidity, and advanced wealth strategies.',
   alternates: { canonical: '/high-income-strategy' },
   openGraph: {
     title: 'High Income Strategy Assessment | Peter Quinn',
     description:
-      'A private strategy assessment for high-income professionals, executives, business owners, and investors exploring retirement flexibility, tax diversification, and liquidity.',
+      'A private strategy assessment for high income professionals, executives, business owners, and investors exploring retirement flexibility, tax diversification, and liquidity.',
     type: 'website',
   },
 }
@@ -28,7 +28,7 @@ const audience = [
   'Business Owners',
   'Medical Professionals',
   'Real Estate Investors',
-  'High-income households planning for retirement',
+  'High income households planning for retirement',
 ]
 
 const reasons = [
@@ -38,7 +38,7 @@ const reasons = [
   },
   {
     title: 'Contribution Limits',
-    body: 'High earners frequently hit IRS contribution ceilings, leaving surplus income with nowhere tax-advantaged to go.',
+    body: 'High earners frequently hit IRS contribution ceilings, leaving surplus income with nowhere tax advantaged to go.',
   },
   {
     title: 'Liquidity',
@@ -57,7 +57,7 @@ const questions = [
   'How can I improve liquidity without sacrificing growth?',
   'How do policy loans work?',
   'What causes some strategies to fail?',
-  'How do high-income earners prepare for retirement differently?',
+  'How do high income earners prepare for retirement differently?',
 ]
 
 const reviewItems = [
@@ -127,7 +127,7 @@ export default function HighEarnerWealthAssessment() {
         </h1>
 
         <p className="text-lg md:text-xl text-[#A9B6CE] max-w-2xl mx-auto leading-relaxed mb-5">
-          High-income professionals often discover that retirement contribution limits, future tax
+          High income professionals often discover that retirement contribution limits, future tax
           exposure, and liquidity restrictions create planning gaps.
         </p>
         <p className="text-base md:text-lg text-[#8FA0BE] max-w-2xl mx-auto leading-relaxed mb-10">
@@ -249,7 +249,7 @@ export default function HighEarnerWealthAssessment() {
             {
               title: 'IUL vs Roth IRA',
               href: '/iul/iul-vs-roth-ira',
-              body: 'Both offer tax advantages, but they differ on contribution limits, access, and how growth is treated. A side-by-side look at where each may fit.',
+              body: 'Both offer tax advantages, but they differ on contribution limits, access, and how growth is treated. A comparison of where each may fit.',
             },
             {
               title: 'What Happens After You Max Your 401(k)?',

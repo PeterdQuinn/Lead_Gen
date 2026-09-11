@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'Most people think life insurance only pays when you die. Every policy Peter Quinn builds pays YOU at diagnosis, cancer, heart attack, stroke, and more. Book a FREE 30-minute call. No cost, no obligation.',
   openGraph: {
     title: 'Your Death Benefit Is Meant For You While You’re Alive',
-    description: 'Independent broker in Mesa, AZ. Living benefits built into every policy. Book a FREE 30-min call, no cost, no obligation.',
+    description: 'Independent broker in Mesa, AZ. Living benefits built into every policy. Book a FREE 30 minute call, no cost, no obligation.',
     type: 'website',
   },
 }

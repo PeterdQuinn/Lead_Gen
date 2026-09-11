@@ -96,7 +96,7 @@ const products = [
   },
   {
     title: 'IUL',
-    body: 'Indexed Universal Life builds tax-free cash value tied to market performance with zero downside risk. Think of it as a retirement account the IRS can’t touch, with living benefits built in.',
+    body: 'Indexed Universal Life builds tax free cash value tied to market performance with zero downside risk. Think of it as a retirement account the IRS can’t touch, with living benefits built in.',
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <path d="M3 17l5-5 4 4 8-8" />
@@ -155,7 +155,7 @@ const products = [
     ),
   },
   {
-    title: 'Long-Term Care',
+    title: 'Long Term Care',
     body: 'The average nursing home costs $10,000 a month. Medicare barely covers it. This policy pays those costs so your savings and your family are protected.',
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -176,7 +176,7 @@ const products = [
   },
   {
     title: 'Small Biz Planning',
-    body: 'Key person insurance, buy-sell agreements, business continuation. If you can’t show up, your business keeps running and your partners are protected.',
+    body: 'Key person insurance, buy sell agreements, business continuation. If you can’t show up, your business keeps running and your partners are protected.',
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="7" width="18" height="13" rx="2" />
@@ -190,7 +190,7 @@ const comparison = [
   {
     topic: 'Product Access',
     captive: 'Locked into one company’s lineup',
-    quinn: 'Shops 30+ top-rated carriers',
+    quinn: 'Shops 30+ highly rated carriers',
   },
   {
     topic: 'Living Benefits',
@@ -290,7 +290,7 @@ export default function Home() {
           heart attack, stroke, and more.
         </p>
 
-        <CtaButton label="Book Your FREE 30-Min Call, No Cost, No Obligation" />
+        <CtaButton label="Book Your FREE 30 Minute Call, No Cost, No Obligation" />
         <p className="text-sm text-[#7B8AA6] mt-5">Takes 2 minutes to schedule · 100% free · No pitch.</p>
       </section>
 
@@ -398,7 +398,7 @@ export default function Home() {
             It’s completely free to book and see what you qualify for.
           </p>
           <p className="text-[#1A2740] text-base md:text-lg font-medium mb-8">No pitch. No pressure. One honest conversation.</p>
-          <CtaButton label="Book My FREE 30-Min Call" variant="dark" />
+          <CtaButton label="Book My FREE 30 Minute Call" variant="dark" />
         </div>
       </section>
 
@@ -483,7 +483,7 @@ export default function Home() {
           ))}
         </div>
 
-        <SectionCta label="Good. Book My FREE 30-Min Call" />
+        <SectionCta label="Good. Book My FREE 30 Minute Call" />
       </section>
 
       {/* FINAL CTA */}
@@ -496,7 +496,7 @@ export default function Home() {
             Don’t be that family. It takes 2 minutes to book and 30 minutes to change everything.{' '}
             <span className="text-white font-semibold">And it’s completely free.</span>
           </p>
-          <CtaButton label="Book My FREE 30-Min Call Now" />
+          <CtaButton label="Book My FREE 30 Minute Call Now" />
           <p className="text-sm text-[#7B8AA6] mt-5">No pitch · No pressure · No cost · Just answers.</p>
         </div>
       </section>
