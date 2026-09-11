@@ -20,7 +20,7 @@ export default function TermsPage() {
         <h2>Appointments and communications</h2>
         <p>Booking a consultation does not obligate you to purchase anything. If you provide contact information, you authorize us to respond about your request. Separate consent is required for recurring marketing texts or calls where required by law. Text opt-in is optional and is not required to purchase a product or service.</p>
         <h2>Third party services</h2>
-        <p>This site may link to or use third-party services including Calendly, GoHighLevel/LeadConnector, and Web3Forms. Their terms and privacy policies apply to their services.</p>
+        <p>This site may link to or use third party services including Calendly, GoHighLevel and Web3Forms. Their terms and privacy policies apply to their services.</p>
         <h2>Acceptable use</h2>
         <p>You agree not to misuse the site, interfere with its operation, submit unlawful or misleading information, or attempt to access systems or data without authorization.</p>
         <h2>Limitation of liability</h2>
